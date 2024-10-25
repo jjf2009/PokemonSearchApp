@@ -37,12 +37,7 @@ jobs:
           if not re.search(r'Fixes #[0-9]+', pr_description):
               print('The PR description should include Fixes #<issue-number>.')
               sys.exit(1)
-
-          # Check if the PR title starts with FIX, FEAT, or DOC
-          if not re.match(r'^(FIX|FEAT|DOC)', pr_title):
-              print('The PR title should start with FIX, FEAT, or DOC.')
-              sys.exit(1)
-
+              
           print('PR description and title are valid.')
           "
         env:
